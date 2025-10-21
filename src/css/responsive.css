@@ -1,0 +1,136 @@
+
+@media (max-width: 992px) {
+    .hero, .hero-section-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+        margin-bottom: 40px;
+    }
+
+    .hero-section-content {
+        gap: 40px;
+    }
+
+    .hero-section-image {
+        order: 1;
+    }
+
+    .hero-section-text {
+        order: 2;
+    }
+
+    .hero-section-text .divider {
+        margin: 0 auto 24px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .footer-links {
+        gap: 50px;
+    }
+}
+
+/* --- Для мобільних пристроїв (до 768px) --- */
+@media (max-width: 768px) {
+    .nav {
+        margin-bottom: 40px;
+    }
+
+    /* Стилі для мобільного меню */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 1.5rem 0;
+    }
+
+    /* Показуємо гамбургер іконку */
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        height: auto;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .bg-element, .element-3, .element-2, .element-top, .element-bottom {
+        display: none;
+    }
+}
+
+/* --- Для маленьких мобільних пристроїв (до 360px) --- */
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .hero-content p, .hero-section-text p, .services-header p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .service-card {
+        padding: 24px;
+    }
+}
